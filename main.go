@@ -5,6 +5,7 @@ import (
 
 	"github.com/charubak.chakraborty/design-patterns-golang/creational/abstractFactory"
 	"github.com/charubak.chakraborty/design-patterns-golang/creational/factory"
+	"github.com/charubak.chakraborty/design-patterns-golang/creational/singleton"
 )
 
 func main() {
@@ -33,4 +34,10 @@ func main() {
 	nikeShirt.SetLogo("logo 1")
 	fmt.Print(nikeShirt.GetLogo())
 
+	//creational - singleton
+
+	for i := 0; i < 30; i++ {
+		go singleton.GetSingleInstance()
+	}
+	fmt.Scanln()
 }
